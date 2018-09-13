@@ -1,0 +1,36 @@
+﻿<Page x:Class="zavrsni_rad.IspisListe_Odabrani"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:zavrsni_rad"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+      Title="IspisListe_Odabrani" Background="Cornsilk">
+
+    <ScrollViewer>
+        <Grid HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label x:Name="predmet" Style="{StaticResource labelStyle4}" Grid.Row="1" Margin="0 30 0 0"></Label>
+            <Label x:Name="rok" Style="{StaticResource labelStyle5}" Foreground="Orange" Grid.Row="2" Margin="0 0 0 20">Ljetni rokovi</Label>
+            <Grid Grid.Row="3">
+                <!--<ListView x:Name="studenti">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Maticni broj" Width="130" DisplayMemberBinding="{Binding id}" />
+                            <GridViewColumn Header="Ime" Width="170" DisplayMemberBinding="{Binding ime}" />
+                            <GridViewColumn Header="Prezime" Width="170" DisplayMemberBinding="{Binding prezime}" />
+                            <GridViewColumn Header="Ocjena" Width="60" DisplayMemberBinding="{Binding ocjena}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView> -->
+                <DataGrid x:Name="tablica_studenti" CanUserAddRows="True" Width="600"/>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Page>
